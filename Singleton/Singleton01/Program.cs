@@ -17,6 +17,11 @@ namespace Singleton01
                 Console.WriteLine($"{amount} {baseCurrency} = {exchangedAmount} {targetCurrency}");
                 Console.WriteLine("---------------------------------------------------------");
             }
+
+            var singleTone1 = StaticHolderSingleton.Instance();
+            var singleTone2 = StaticHolderSingleton.Instance();
+            Console.WriteLine(singleTone1.GetHashCode());
+            Console.WriteLine(singleTone2.GetHashCode());
         }
     }
 }
